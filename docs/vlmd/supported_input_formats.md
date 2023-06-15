@@ -2,6 +2,10 @@
 
 In this section, supported formats for generating heal-compliant data dictionaries are listed. We also provide additional instructions on how to get the necessary input files format/software.
 
+!!! note
+    To further annotate your outputted data dictionaries, see the variable level metadata field properties (with examples):
+        - for the [`csv` data dictionary](rendered-schemas/csv-fields.md)
+        - for the [`json` data dictionary](rendered-schemas/json-fields.md)
 
 
 ### `csv` Datasets
@@ -13,11 +17,6 @@ and Excel. Importantly, it is simple and can be easily integrated into web appli
 Currently, the HEAL data utilities `vlmd` function can infer a minimal-HEAL compliant dataset by inferring `name`,`type`,and `enum` (i.e., possible values). After this minimal data dictionary is generated, the researcher can further annotate
 it with fields' `description` and other optional properties in either the HEAL-compliant csv or json data dictionary. 
 
-!!! note
-    To further annotate the data dictionary, see the variable level metadata field properties (with examples):
-        - for the [`csv` data dictionary](rendered-schemas/csv-fields.md)
-        - for the [`json` data dictionary](rendered-schemas/json-fields.md)
-
 ### `csv` HEAL data dictionary (e.g., from template)
 
 HEAL data utilities can also input a `csv` HEAL data dictionary either from a manually filled out template or 
@@ -26,7 +25,12 @@ as an additional step after additional annotation (e.g., from the HEAL csv data 
 #### Creating a `csv` HEAL data dictionary
 
 1. Use the template and start from scratch
-    > [Click here]() to download a `csv` HEAL data dictionary template. 
+
+    [Click here to download a blank __csv__ HEAL data dictionary template here](https://github.com/norc-heal/heal-metadata-schemas/blob/mbkranz/variable-lvl-dev/variable-level-metadata-schema/templates/template_submission.csv){:download .md-button .md-button--primary }
+
+    [Click here to download an example of filled out __csv__ HEAL data dictionary template here](https://github.com/norc-heal/healdata-utils/blob/main/tests/data/heal_dd_from_redcap_dd_export.csv){:download .md-button .md-button--primary }
+
+    ```
 2. Output from one of the above formats and then further annotate.
 
 !!! note
@@ -49,8 +53,13 @@ these csv data dictionary files are converted to a json file (the most common fo
 The HEAL data utilities `vlmd` tool can also input this `json` HEAL data dictionary either from a manually filled out template or as an additional step after additional annotation. Another advantage of `json` HEAL data dictionaries is that one can specify metadata describing the data dictionary as a whole (e.g., the `description` and `title`). 
 
 #### Creating a `json` HEAL data dictionary
-1. Use the template and start from scratch
-    > [Click here to download]() a `json` HEAL data dictionary template. 
+1. Use the template and start from scratch (click on the template below to expand)
+
+    [Click here to download a blank __json__ HEAL data dictionary template here](https://github.com/norc-heal/heal-metadata-schemas/blob/mbkranz/variable-lvl-dev/variable-level-metadata-schema/templates/template_submission.json){:download .md-button .md-button--primary }
+
+    [Click here to download an example of filled out __json__ HEAL data dictionary template here](https://github.com/norc-heal/healdata-utils/blob/main/tests/data/heal_dd_from_redcap_dd_export.json){:download .md-button .md-button--primary }
+
+    ```
 2. Output from one of the above formats and then further annotate.
 
 !!! note
