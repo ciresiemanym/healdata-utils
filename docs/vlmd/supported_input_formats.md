@@ -28,7 +28,7 @@ as an additional step after additional annotation (e.g., from the HEAL csv data 
 
     [Click here to download an example of filled out __csv__ HEAL data dictionary template here](https://github.com/norc-heal/healdata-utils/blob/main/tests/data/heal_dd_from_redcap_dd_export.csv){:download .md-button .md-button--primary }
 
-2. Output from one of the above formats and then further annotate.
+2. Output from one of the below software-specific formats and then further annotate.
 
 !!! note
     To further annotate your outputted data dictionaries, see the variable level metadata field properties (with examples) for either the __`csv data dictionary`__ [click here](rendered-schemas/csv-fields.md)
@@ -56,7 +56,7 @@ The HEAL data utilities `vlmd` tool can also input this `json` HEAL data diction
 
     [Click here to download an example of filled out __json__ HEAL data dictionary template here](https://github.com/norc-heal/healdata-utils/blob/main/tests/data/heal_dd_from_redcap_dd_export.json){:download .md-button .md-button--primary }
 
-2. Output from one of the above formats and then further annotate.
+2. Output from one of the below software-specific formats and then further annotate.
 
 !!! note
     To further annotate your outputted data dictionaries, see the variable level metadata field properties (with examples) for the __`json data dictionary`__ [click here](rendered-schemas/json-fields.md)
