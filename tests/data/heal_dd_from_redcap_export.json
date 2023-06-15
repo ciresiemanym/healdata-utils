@@ -1,0 +1,1802 @@
+{
+    "title": "redcap_dd_export.redcap",
+    "description": null,
+    "data_dictionary": [
+        {
+            "name": "study_id",
+            "type": "string",
+            "description": "Study ID",
+            "title": "Study ID",
+            "module": "demographics"
+        },
+        {
+            "name": "date_enrolled",
+            "type": "date",
+            "format": "any",
+            "description": "Demographic Characteristics: Date subject signed consent",
+            "title": "Date subject signed consent",
+            "module": "demographics"
+        },
+        {
+            "name": "first_name",
+            "type": "string",
+            "description": "Demographic Characteristics: First Name",
+            "title": "First Name",
+            "module": "demographics"
+        },
+        {
+            "name": "last_name",
+            "type": "string",
+            "description": "Demographic Characteristics: Last Name",
+            "title": "Last Name",
+            "module": "demographics"
+        },
+        {
+            "name": "address",
+            "type": "string",
+            "description": "Contact Information: Street, City, State, ZIP",
+            "title": "Street, City, State, ZIP",
+            "module": "demographics"
+        },
+        {
+            "name": "telephone_1",
+            "type": "string",
+            "constraints": {
+                "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+            },
+            "description": "Contact Information: Phone number",
+            "title": "Phone number",
+            "module": "demographics"
+        },
+        {
+            "name": "telephone_2",
+            "type": "string",
+            "constraints": {
+                "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+            },
+            "description": "Contact Information: Second phone number",
+            "title": "Second phone number",
+            "module": "demographics"
+        },
+        {
+            "name": "email",
+            "type": "string",
+            "format": "email",
+            "description": "Contact Information: E-mail",
+            "title": "E-mail",
+            "module": "demographics"
+        },
+        {
+            "name": "sex",
+            "type": "integer",
+            "encodings": {
+                "0": "Female",
+                "1": "Male"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Contact Information: Gender",
+            "title": "Gender",
+            "module": "demographics"
+        },
+        {
+            "name": "given_birth",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Contact Information: Has the subject given birth before?",
+            "title": "Has the subject given birth before?",
+            "module": "demographics"
+        },
+        {
+            "name": "num_children",
+            "type": "integer",
+            "description": "Contact Information: How many times has the subject given birth?",
+            "title": "How many times has the subject given birth?",
+            "module": "demographics"
+        },
+        {
+            "name": "ethnicity",
+            "type": "integer",
+            "encodings": {
+                "0": "Hispanic or Latino",
+                "1": "NOT Hispanic or Latino",
+                "2": "Unknown / Not Reported"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2"
+                ]
+            },
+            "description": "Contact Information: Ethnicity",
+            "title": "Ethnicity",
+            "module": "demographics"
+        },
+        {
+            "description": "Contact Information: Race[choice=American Indian/Alaska Native]",
+            "title": "Race:American Indian/Alaska NativeRace",
+            "name": "race___0",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Contact Information: Race[choice=Asian]",
+            "title": "Race:AsianRace",
+            "name": "race___1",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Contact Information: Race[choice=Native Hawaiian or Other Pacific Islander]",
+            "title": "Race:Native Hawaiian or Other Pacific IslanderRace",
+            "name": "race___2",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Contact Information: Race[choice=Black or African American]",
+            "title": "Race:Black or African AmericanRace",
+            "name": "race___3",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Contact Information: Race[choice=White]",
+            "title": "Race:WhiteRace",
+            "name": "race___4",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Contact Information: Race[choice=More Than One Race]",
+            "title": "Race:More Than One RaceRace",
+            "name": "race___5",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Contact Information: Race[choice=Unknown / Not Reported]",
+            "title": "Race:Unknown / Not ReportedRace",
+            "name": "race___6",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "name": "dob",
+            "type": "date",
+            "format": "any",
+            "description": "Contact Information: Date of birth",
+            "title": "Date of birth",
+            "module": "demographics"
+        },
+        {
+            "name": "age",
+            "description": "Contact Information: Age (years)[calculation: round(datediff([dob],'today','y'),0)]",
+            "type": "number",
+            "title": "Age (years)",
+            "module": "demographics"
+        },
+        {
+            "name": "height",
+            "type": "number",
+            "description": "Contact Information: Height (cm)",
+            "title": "Height (cm)",
+            "module": "demographics"
+        },
+        {
+            "name": "weight",
+            "type": "integer",
+            "description": "Contact Information: Weight (kilograms)",
+            "title": "Weight (kilograms)",
+            "module": "demographics"
+        },
+        {
+            "name": "bmi",
+            "description": "Contact Information: BMI[calculation: round(([weight]*10000)/(([height])^(2)),1)]",
+            "type": "number",
+            "title": "BMI",
+            "module": "demographics"
+        },
+        {
+            "name": "patient_document",
+            "type": "string",
+            "description": "Contact Information: Patient document",
+            "title": "Patient document",
+            "module": "demographics"
+        },
+        {
+            "name": "comorbidities",
+            "type": "string",
+            "description": "Contact Information: Any comorbid condition",
+            "title": "Any comorbid condition",
+            "module": "demographics"
+        },
+        {
+            "name": "diabetes",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Contact Information: Patient has a diagnosis of diabetes mellitus?",
+            "title": "Patient has a diagnosis of diabetes mellitus?",
+            "module": "demographics"
+        },
+        {
+            "name": "diabetes_type",
+            "type": "integer",
+            "encodings": {
+                "0": "Type 1 insulin-dependent",
+                "1": "Type 2 insulin-dependent",
+                "2": "Type 2 non insulin-dependent"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2"
+                ]
+            },
+            "description": "Contact Information: Type of Diabetes Mellitus",
+            "title": "Type of Diabetes Mellitus",
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Gym (Weight Training)[choice=Monday]",
+            "title": "Gym:MondayGym (Weight Training)",
+            "name": "gym___0",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Gym (Weight Training)[choice=Tuesday]",
+            "title": "Gym:TuesdayGym (Weight Training)",
+            "name": "gym___1",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Gym (Weight Training)[choice=Wednesday]",
+            "title": "Gym:WednesdayGym (Weight Training)",
+            "name": "gym___2",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Gym (Weight Training)[choice=Thursday]",
+            "title": "Gym:ThursdayGym (Weight Training)",
+            "name": "gym___3",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Gym (Weight Training)[choice=Friday]",
+            "title": "Gym:FridayGym (Weight Training)",
+            "name": "gym___4",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Aerobics[choice=Monday]",
+            "title": "Aerobics:MondayAerobics",
+            "name": "aerobics___0",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Aerobics[choice=Tuesday]",
+            "title": "Aerobics:TuesdayAerobics",
+            "name": "aerobics___1",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Aerobics[choice=Wednesday]",
+            "title": "Aerobics:WednesdayAerobics",
+            "name": "aerobics___2",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Aerobics[choice=Thursday]",
+            "title": "Aerobics:ThursdayAerobics",
+            "name": "aerobics___3",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Aerobics[choice=Friday]",
+            "title": "Aerobics:FridayAerobics",
+            "name": "aerobics___4",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Eat Out (Dinner/Lunch)[choice=Monday]",
+            "title": "Eat:MondayEat Out (Dinner/Lunch)",
+            "name": "eat___0",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Eat Out (Dinner/Lunch)[choice=Tuesday]",
+            "title": "Eat:TuesdayEat Out (Dinner/Lunch)",
+            "name": "eat___1",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Eat Out (Dinner/Lunch)[choice=Wednesday]",
+            "title": "Eat:WednesdayEat Out (Dinner/Lunch)",
+            "name": "eat___2",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Eat Out (Dinner/Lunch)[choice=Thursday]",
+            "title": "Eat:ThursdayEat Out (Dinner/Lunch)",
+            "name": "eat___3",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Eat Out (Dinner/Lunch)[choice=Friday]",
+            "title": "Eat:FridayEat Out (Dinner/Lunch)",
+            "name": "eat___4",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Drink (Alcoholic Beverages)[choice=Monday]",
+            "title": "Drink:MondayDrink (Alcoholic Beverages)",
+            "name": "drink___0",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Drink (Alcoholic Beverages)[choice=Tuesday]",
+            "title": "Drink:TuesdayDrink (Alcoholic Beverages)",
+            "name": "drink___1",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Drink (Alcoholic Beverages)[choice=Wednesday]",
+            "title": "Drink:WednesdayDrink (Alcoholic Beverages)",
+            "name": "drink___2",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Drink (Alcoholic Beverages)[choice=Thursday]",
+            "title": "Drink:ThursdayDrink (Alcoholic Beverages)",
+            "name": "drink___3",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "description": "Please provide the patient's weekly schedule for the activities below.: Drink (Alcoholic Beverages)[choice=Friday]",
+            "title": "Drink:FridayDrink (Alcoholic Beverages)",
+            "name": "drink___4",
+            "type": "boolean",
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "encodings": {
+                "0": "Unchecked",
+                "1": "Checked"
+            },
+            "module": "demographics"
+        },
+        {
+            "name": "dialysis_initiation",
+            "type": "date",
+            "format": "any",
+            "description": "Dialysis Information: Date of first outpatient dialysis treatment",
+            "title": "Date of first outpatient dialysis treatment",
+            "module": "demographics"
+        },
+        {
+            "name": "access_type",
+            "type": "integer",
+            "encodings": {
+                "0": "Graft",
+                "1": "Fistula",
+                "2": "Catheter with maturing graft",
+                "3": "Catheter with maturing fistula"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "description": "Dialysis Information: Type of vascular access",
+            "title": "Type of vascular access",
+            "module": "demographics"
+        },
+        {
+            "name": "access_location",
+            "type": "integer",
+            "encodings": {
+                "0": "Forearm",
+                "1": "Upper arm",
+                "2": "Internal jugular vein",
+                "3": "Subclavian vein",
+                "4": "Other"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "description": "Dialysis Information: Location of currently used vascular access",
+            "title": "Location of currently used vascular access",
+            "module": "demographics"
+        },
+        {
+            "name": "dialysis_unit_name",
+            "type": "string",
+            "description": "Dialysis Information: Name of dialysis unit",
+            "title": "Name of dialysis unit",
+            "module": "demographics"
+        },
+        {
+            "name": "dialysis_unit_phone",
+            "type": "string",
+            "constraints": {
+                "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+            },
+            "description": "Dialysis Information: Phone number",
+            "title": "Phone number",
+            "module": "demographics"
+        },
+        {
+            "name": "dialysis_schedule_days",
+            "type": "integer",
+            "encodings": {
+                "0": "Monday-Wednesday-Friday",
+                "1": "Tuesday-Thursday-Saturday",
+                "2": "Other"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2"
+                ]
+            },
+            "description": "Dialysis Information: Days of the week patient is dialyzed",
+            "title": "Days of the week patient is dialyzed",
+            "module": "demographics"
+        },
+        {
+            "name": "dialysis_schedule_time",
+            "type": "integer",
+            "encodings": {
+                "0": "First shift",
+                "1": "Second shift",
+                "2": "Third shift",
+                "3": "Fourth shift"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "description": "Dialysis Information: Shift patient is dialyzed",
+            "title": "Shift patient is dialyzed",
+            "module": "demographics"
+        },
+        {
+            "name": "etiology_esrd",
+            "type": "integer",
+            "encodings": {
+                "0": "Diabetes",
+                "1": "Hypertension",
+                "2": "Glomerulonephritis",
+                "3": "Polycystic Kidney Disease",
+                "4": "Interstitial Nephritis",
+                "5": "Hereditary Nephritis",
+                "6": "Other"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6"
+                ]
+            },
+            "description": "Dialysis Information: Etiology of ESRD",
+            "title": "Etiology of ESRD",
+            "module": "demographics"
+        },
+        {
+            "name": "subject_comments",
+            "type": "string",
+            "description": "General Comments: Comments",
+            "title": "Comments",
+            "module": "demographics"
+        },
+        {
+            "name": "date_visit_b",
+            "type": "date",
+            "format": "any",
+            "description": "Baseline Measurements: Date of baseline visit",
+            "title": "Date of baseline visit",
+            "module": "baseline_data"
+        },
+        {
+            "name": "date_blood_b",
+            "type": "date",
+            "format": "any",
+            "description": "Baseline Measurements: Date blood was drawn",
+            "title": "Date blood was drawn",
+            "module": "baseline_data"
+        },
+        {
+            "name": "alb_b",
+            "type": "integer",
+            "description": "Baseline Measurements: Serum Albumin (g/dL)",
+            "title": "Serum Albumin (g/dL)",
+            "module": "baseline_data"
+        },
+        {
+            "name": "prealb_b",
+            "type": "number",
+            "description": "Baseline Measurements: Serum Prealbumin (mg/dL)",
+            "title": "Serum Prealbumin (mg/dL)",
+            "module": "baseline_data"
+        },
+        {
+            "name": "creat_b",
+            "type": "number",
+            "description": "Baseline Measurements: Creatinine (mg/dL)",
+            "title": "Creatinine (mg/dL)",
+            "module": "baseline_data"
+        },
+        {
+            "name": "npcr_b",
+            "type": "number",
+            "description": "Baseline Measurements: Normalized Protein Catabolic Rate (g/kg/d)",
+            "title": "Normalized Protein Catabolic Rate (g/kg/d)",
+            "module": "baseline_data"
+        },
+        {
+            "name": "chol_b",
+            "type": "number",
+            "description": "Baseline Measurements: Cholesterol (mg/dL)",
+            "title": "Cholesterol (mg/dL)",
+            "module": "baseline_data"
+        },
+        {
+            "name": "transferrin_b",
+            "type": "number",
+            "description": "Baseline Measurements: Transferrin (mg/dL)",
+            "title": "Transferrin (mg/dL)",
+            "module": "baseline_data"
+        },
+        {
+            "name": "kt_v_b",
+            "type": "number",
+            "description": "Baseline Measurements: Kt/V",
+            "title": "Kt/V",
+            "module": "baseline_data"
+        },
+        {
+            "name": "drywt_b",
+            "type": "number",
+            "description": "Baseline Measurements: Dry weight (kilograms)",
+            "title": "Dry weight (kilograms)",
+            "module": "baseline_data"
+        },
+        {
+            "name": "plasma1_b",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Baseline Measurements: Collected Plasma 1?",
+            "title": "Collected Plasma 1?",
+            "module": "baseline_data"
+        },
+        {
+            "name": "plasma2_b",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Baseline Measurements: Collected Plasma 2?",
+            "title": "Collected Plasma 2?",
+            "module": "baseline_data"
+        },
+        {
+            "name": "plasma3_b",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Baseline Measurements: Collected Plasma 3?",
+            "title": "Collected Plasma 3?",
+            "module": "baseline_data"
+        },
+        {
+            "name": "serum1_b",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Baseline Measurements: Collected Serum 1?",
+            "title": "Collected Serum 1?",
+            "module": "baseline_data"
+        },
+        {
+            "name": "serum2_b",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Baseline Measurements: Collected Serum 2?",
+            "title": "Collected Serum 2?",
+            "module": "baseline_data"
+        },
+        {
+            "name": "serum3_b",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Baseline Measurements: Collected Serum 3?",
+            "title": "Collected Serum 3?",
+            "module": "baseline_data"
+        },
+        {
+            "name": "sga_b",
+            "type": "number",
+            "description": "Baseline Measurements: Subject Global Assessment (score = 1-7)",
+            "title": "Subject Global Assessment (score = 1-7)",
+            "module": "baseline_data"
+        },
+        {
+            "name": "date_supplement_dispensed",
+            "type": "date",
+            "format": "any",
+            "description": "Baseline Measurements: Date patient begins supplement",
+            "title": "Date patient begins supplement",
+            "module": "baseline_data"
+        },
+        {
+            "name": "date_visit_1",
+            "type": "date",
+            "format": "any",
+            "description": "Month 1: Date of Month 1 visit",
+            "title": "Date of Month 1 visit",
+            "module": "month_1_data"
+        },
+        {
+            "name": "alb_1",
+            "type": "number",
+            "description": "Month 1: Serum Albumin (g/dL)",
+            "title": "Serum Albumin (g/dL)",
+            "module": "month_1_data"
+        },
+        {
+            "name": "prealb_1",
+            "type": "number",
+            "description": "Month 1: Serum Prealbumin (mg/dL)",
+            "title": "Serum Prealbumin (mg/dL)",
+            "module": "month_1_data"
+        },
+        {
+            "name": "creat_1",
+            "type": "number",
+            "description": "Month 1: Creatinine (mg/dL)",
+            "title": "Creatinine (mg/dL)",
+            "module": "month_1_data"
+        },
+        {
+            "name": "npcr_1",
+            "type": "number",
+            "description": "Month 1: Normalized Protein Catabolic Rate (g/kg/d)",
+            "title": "Normalized Protein Catabolic Rate (g/kg/d)",
+            "module": "month_1_data"
+        },
+        {
+            "name": "chol_1",
+            "type": "number",
+            "description": "Month 1: Cholesterol (mg/dL)",
+            "title": "Cholesterol (mg/dL)",
+            "module": "month_1_data"
+        },
+        {
+            "name": "transferrin_1",
+            "type": "number",
+            "description": "Month 1: Transferrin (mg/dL)",
+            "title": "Transferrin (mg/dL)",
+            "module": "month_1_data"
+        },
+        {
+            "name": "kt_v_1",
+            "type": "number",
+            "description": "Month 1: Kt/V",
+            "title": "Kt/V",
+            "module": "month_1_data"
+        },
+        {
+            "name": "drywt_1",
+            "type": "number",
+            "description": "Month 1: Dry weight (kilograms)",
+            "title": "Dry weight (kilograms)",
+            "module": "month_1_data"
+        },
+        {
+            "name": "no_show_1",
+            "type": "number",
+            "description": "Month 1: Number of treatments missed",
+            "title": "Number of treatments missed",
+            "module": "month_1_data"
+        },
+        {
+            "name": "compliance_1",
+            "type": "integer",
+            "encodings": {
+                "0": "100 percent",
+                "1": "99-75 percent",
+                "2": "74-50 percent",
+                "3": "49-25 percent",
+                "4": "0-24 percent"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "description": "Month 1: How compliant was the patient in drinking the supplement?",
+            "title": "How compliant was the patient in drinking the supplement?",
+            "module": "month_1_data"
+        },
+        {
+            "name": "hospit_1",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Hospitalization Data: Was patient hospitalized since last visit?",
+            "title": "Was patient hospitalized since last visit?",
+            "module": "month_1_data"
+        },
+        {
+            "name": "cause_hosp_1",
+            "type": "integer",
+            "encodings": {
+                "1": "Vascular access related events",
+                "2": "CVD events",
+                "3": "Other"
+            },
+            "constraints": {
+                "enum": [
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "description": "Hospitalization Data: What was the cause of hospitalization?",
+            "title": "What was the cause of hospitalization?",
+            "module": "month_1_data"
+        },
+        {
+            "name": "admission_date_1",
+            "type": "date",
+            "format": "any",
+            "description": "Hospitalization Data: Date of hospital admission",
+            "title": "Date of hospital admission",
+            "module": "month_1_data"
+        },
+        {
+            "name": "discharge_date_1",
+            "type": "date",
+            "format": "any",
+            "description": "Hospitalization Data: Date of hospital discharge",
+            "title": "Date of hospital discharge",
+            "module": "month_1_data"
+        },
+        {
+            "name": "discharge_summary_1",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Hospitalization Data: Discharge summary in patients binder?",
+            "title": "Discharge summary in patients binder?",
+            "module": "month_1_data"
+        },
+        {
+            "name": "death_1",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Mortality Data: Has patient died since last visit?",
+            "title": "Has patient died since last visit?",
+            "module": "month_1_data"
+        },
+        {
+            "name": "date_death_1",
+            "type": "date",
+            "format": "any",
+            "description": "Mortality Data: Date of death",
+            "title": "Date of death",
+            "module": "month_1_data"
+        },
+        {
+            "name": "cause_death_1",
+            "type": "integer",
+            "encodings": {
+                "1": "All-cause",
+                "2": "Cardiovascular"
+            },
+            "constraints": {
+                "enum": [
+                    "1",
+                    "2"
+                ]
+            },
+            "description": "Mortality Data: What was the cause of death?",
+            "title": "What was the cause of death?",
+            "module": "month_1_data"
+        },
+        {
+            "name": "date_visit_2",
+            "type": "date",
+            "format": "any",
+            "description": "Month 2: Date of Month 2 visit",
+            "title": "Date of Month 2 visit",
+            "module": "month_2_data"
+        },
+        {
+            "name": "alb_2",
+            "type": "number",
+            "description": "Month 2: Serum Albumin (g/dL)",
+            "title": "Serum Albumin (g/dL)",
+            "module": "month_2_data"
+        },
+        {
+            "name": "prealb_2",
+            "type": "number",
+            "description": "Month 2: Serum Prealbumin (mg/dL)",
+            "title": "Serum Prealbumin (mg/dL)",
+            "module": "month_2_data"
+        },
+        {
+            "name": "creat_2",
+            "type": "number",
+            "description": "Month 2: Creatinine (mg/dL)",
+            "title": "Creatinine (mg/dL)",
+            "module": "month_2_data"
+        },
+        {
+            "name": "npcr_2",
+            "type": "number",
+            "description": "Month 2: Normalized Protein Catabolic Rate (g/kg/d)",
+            "title": "Normalized Protein Catabolic Rate (g/kg/d)",
+            "module": "month_2_data"
+        },
+        {
+            "name": "chol_2",
+            "type": "number",
+            "description": "Month 2: Cholesterol (mg/dL)",
+            "title": "Cholesterol (mg/dL)",
+            "module": "month_2_data"
+        },
+        {
+            "name": "transferrin_2",
+            "type": "number",
+            "description": "Month 2: Transferrin (mg/dL)",
+            "title": "Transferrin (mg/dL)",
+            "module": "month_2_data"
+        },
+        {
+            "name": "kt_v_2",
+            "type": "number",
+            "description": "Month 2: Kt/V",
+            "title": "Kt/V",
+            "module": "month_2_data"
+        },
+        {
+            "name": "drywt_2",
+            "type": "number",
+            "description": "Month 2: Dry weight (kilograms)",
+            "title": "Dry weight (kilograms)",
+            "module": "month_2_data"
+        },
+        {
+            "name": "no_show_2",
+            "type": "number",
+            "description": "Month 2: Number of treatments missed",
+            "title": "Number of treatments missed",
+            "module": "month_2_data"
+        },
+        {
+            "name": "compliance_2",
+            "type": "integer",
+            "encodings": {
+                "0": "100 percent",
+                "1": "99-75 percent",
+                "2": "74-50 percent",
+                "3": "49-25 percent",
+                "4": "0-24 percent"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "description": "Month 2: How compliant was the patient in drinking the supplement?",
+            "title": "How compliant was the patient in drinking the supplement?",
+            "module": "month_2_data"
+        },
+        {
+            "name": "hospit_2",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Hospitalization Data: Was patient hospitalized since last visit?",
+            "title": "Was patient hospitalized since last visit?",
+            "module": "month_2_data"
+        },
+        {
+            "name": "cause_hosp_2",
+            "type": "integer",
+            "encodings": {
+                "1": "Vascular access related events",
+                "2": "CVD events",
+                "3": "Other"
+            },
+            "constraints": {
+                "enum": [
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "description": "Hospitalization Data: What was the cause of hospitalization?",
+            "title": "What was the cause of hospitalization?",
+            "module": "month_2_data"
+        },
+        {
+            "name": "admission_date_2",
+            "type": "date",
+            "format": "any",
+            "description": "Hospitalization Data: Date of hospital admission",
+            "title": "Date of hospital admission",
+            "module": "month_2_data"
+        },
+        {
+            "name": "discharge_date_2",
+            "type": "date",
+            "format": "any",
+            "description": "Hospitalization Data: Date of hospital discharge",
+            "title": "Date of hospital discharge",
+            "module": "month_2_data"
+        },
+        {
+            "name": "discharge_summary_2",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Hospitalization Data: Discharge summary in patients binder?",
+            "title": "Discharge summary in patients binder?",
+            "module": "month_2_data"
+        },
+        {
+            "name": "death_2",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Mortality Data: Has patient died since last visit?",
+            "title": "Has patient died since last visit?",
+            "module": "month_2_data"
+        },
+        {
+            "name": "date_death_2",
+            "type": "date",
+            "format": "any",
+            "description": "Mortality Data: Date of death",
+            "title": "Date of death",
+            "module": "month_2_data"
+        },
+        {
+            "name": "cause_death_2",
+            "type": "integer",
+            "encodings": {
+                "1": "All-cause",
+                "2": "Cardiovascular"
+            },
+            "constraints": {
+                "enum": [
+                    "1",
+                    "2"
+                ]
+            },
+            "description": "Mortality Data: What was the cause of death?",
+            "title": "What was the cause of death?",
+            "module": "month_2_data"
+        },
+        {
+            "name": "date_visit_3",
+            "type": "date",
+            "format": "any",
+            "description": "Month 3: Date of Month 3 visit",
+            "title": "Date of Month 3 visit",
+            "module": "month_3_data"
+        },
+        {
+            "name": "date_blood_3",
+            "type": "date",
+            "format": "any",
+            "description": "Month 3: Date blood was drawn",
+            "title": "Date blood was drawn",
+            "module": "month_3_data"
+        },
+        {
+            "name": "alb_3",
+            "type": "number",
+            "description": "Month 3: Serum Albumin (g/dL)",
+            "title": "Serum Albumin (g/dL)",
+            "module": "month_3_data"
+        },
+        {
+            "name": "prealb_3",
+            "type": "number",
+            "description": "Month 3: Serum Prealbumin (mg/dL)",
+            "title": "Serum Prealbumin (mg/dL)",
+            "module": "month_3_data"
+        },
+        {
+            "name": "creat_3",
+            "type": "number",
+            "description": "Month 3: Creatinine (mg/dL)",
+            "title": "Creatinine (mg/dL)",
+            "module": "month_3_data"
+        },
+        {
+            "name": "npcr_3",
+            "type": "number",
+            "description": "Month 3: Normalized Protein Catabolic Rate (g/kg/d)",
+            "title": "Normalized Protein Catabolic Rate (g/kg/d)",
+            "module": "month_3_data"
+        },
+        {
+            "name": "chol_3",
+            "type": "number",
+            "description": "Month 3: Cholesterol (mg/dL)",
+            "title": "Cholesterol (mg/dL)",
+            "module": "month_3_data"
+        },
+        {
+            "name": "transferrin_3",
+            "type": "number",
+            "description": "Month 3: Transferrin (mg/dL)",
+            "title": "Transferrin (mg/dL)",
+            "module": "month_3_data"
+        },
+        {
+            "name": "kt_v_3",
+            "type": "number",
+            "description": "Month 3: Kt/V",
+            "title": "Kt/V",
+            "module": "month_3_data"
+        },
+        {
+            "name": "drywt_3",
+            "type": "number",
+            "description": "Month 3: Dry weight (kilograms)",
+            "title": "Dry weight (kilograms)",
+            "module": "month_3_data"
+        },
+        {
+            "name": "plasma1_3",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Month 3: Collected Plasma 1?",
+            "title": "Collected Plasma 1?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "plasma2_3",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Month 3: Collected Plasma 2?",
+            "title": "Collected Plasma 2?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "plasma3_3",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Month 3: Collected Plasma 3?",
+            "title": "Collected Plasma 3?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "serum1_3",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Month 3: Collected Serum 1?",
+            "title": "Collected Serum 1?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "serum2_3",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Month 3: Collected Serum 2?",
+            "title": "Collected Serum 2?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "serum3_3",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Month 3: Collected Serum 3?",
+            "title": "Collected Serum 3?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "sga_3",
+            "type": "number",
+            "description": "Month 3: Subject Global Assessment (score = 1-7)",
+            "title": "Subject Global Assessment (score = 1-7)",
+            "module": "month_3_data"
+        },
+        {
+            "name": "no_show_3",
+            "type": "number",
+            "description": "Month 3: Number of treatments missed",
+            "title": "Number of treatments missed",
+            "module": "month_3_data"
+        },
+        {
+            "name": "compliance_3",
+            "type": "integer",
+            "encodings": {
+                "0": "100 percent",
+                "1": "99-75 percent",
+                "2": "74-50 percent",
+                "3": "49-25 percent",
+                "4": "0-24 percent"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "description": "Month 3: How compliant was the patient in drinking the supplement?",
+            "title": "How compliant was the patient in drinking the supplement?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "hospit_3",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Hospitalization Data: Was patient hospitalized since last visit?",
+            "title": "Was patient hospitalized since last visit?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "cause_hosp_3",
+            "type": "integer",
+            "encodings": {
+                "1": "Vascular access related events",
+                "2": "CVD events",
+                "3": "Other"
+            },
+            "constraints": {
+                "enum": [
+                    "1",
+                    "2",
+                    "3"
+                ]
+            },
+            "description": "Hospitalization Data: What was the cause of hospitalization?",
+            "title": "What was the cause of hospitalization?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "admission_date_3",
+            "type": "date",
+            "format": "any",
+            "description": "Hospitalization Data: Date of hospital admission",
+            "title": "Date of hospital admission",
+            "module": "month_3_data"
+        },
+        {
+            "name": "discharge_date_3",
+            "type": "date",
+            "format": "any",
+            "description": "Hospitalization Data: Date of hospital discharge",
+            "title": "Date of hospital discharge",
+            "module": "month_3_data"
+        },
+        {
+            "name": "discharge_summary_3",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Hospitalization Data: Discharge summary in patients binder?",
+            "title": "Discharge summary in patients binder?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "death_3",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Mortality Data: Has patient died since last visit?",
+            "title": "Has patient died since last visit?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "date_death_3",
+            "type": "date",
+            "format": "any",
+            "description": "Mortality Data: Date of death",
+            "title": "Date of death",
+            "module": "month_3_data"
+        },
+        {
+            "name": "cause_death_3",
+            "type": "integer",
+            "encodings": {
+                "1": "All-cause",
+                "2": "Cardiovascular"
+            },
+            "constraints": {
+                "enum": [
+                    "1",
+                    "2"
+                ]
+            },
+            "description": "Mortality Data: What was the cause of death?",
+            "title": "What was the cause of death?",
+            "module": "month_3_data"
+        },
+        {
+            "name": "complete_study",
+            "type": "integer",
+            "encodings": {
+                "0": "No",
+                "1": "Yes"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1"
+                ]
+            },
+            "description": "Study Completion Information: Has patient completed study?",
+            "title": "Has patient completed study?",
+            "module": "completion_data"
+        },
+        {
+            "name": "withdraw_date",
+            "type": "date",
+            "format": "any",
+            "description": "Study Completion Information: Put a date if patient withdrew study",
+            "title": "Put a date if patient withdrew study",
+            "module": "completion_data"
+        },
+        {
+            "name": "withdraw_reason",
+            "type": "integer",
+            "encodings": {
+                "0": "Non-compliance",
+                "1": "Did not wish to continue in study",
+                "2": "Could not tolerate the supplement",
+                "3": "Hospitalization",
+                "4": "Other"
+            },
+            "constraints": {
+                "enum": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4"
+                ]
+            },
+            "description": "Study Completion Information: Reason patient withdrew from study",
+            "title": "Reason patient withdrew from study",
+            "module": "completion_data"
+        },
+        {
+            "name": "complete_study_date",
+            "type": "date",
+            "format": "any",
+            "description": "Study Completion Information: Date of study completion",
+            "title": "Date of study completion",
+            "module": "completion_data"
+        },
+        {
+            "name": "study_comments",
+            "type": "string",
+            "description": "General Comments: Comments",
+            "title": "Comments",
+            "module": "completion_data"
+        }
+    ]
+}
