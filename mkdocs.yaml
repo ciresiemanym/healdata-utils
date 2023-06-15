@@ -7,8 +7,10 @@ nav:
   # - contributing.md
   # - install.md
   - Variable Level Metadata:
+    - vlmd/index.md 
     - vlmd/supported_input_formats.md
-    - Fields:
+    - Fields: 
+      - vlmd/rendered-schemas/index.md
       - "CSV Data dictionary": vlmd/rendered-schemas/csv-fields.md
       - "JSON Data dictionary": vlmd/rendered-schemas/json-fields.md
     
